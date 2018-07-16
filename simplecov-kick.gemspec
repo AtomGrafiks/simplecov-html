@@ -2,13 +2,13 @@ $LOAD_PATH.push File.expand_path("../lib", __FILE__)
 require "simplecov-html/version"
 
 Gem::Specification.new do |gem|
-  gem.name        = "simplecov-html"
+  gem.name        = "simplecov-kick"
   gem.version     = SimpleCov::Formatter::KickFormatter::VERSION
   gem.platform    = Gem::Platform::RUBY
-  gem.authors     = ["Christoph Olszowka"]
+  gem.authors     = ["Atom", "Christoph Olszowka"]
   gem.email       = ["christoph at olszowka de"]
-  gem.homepage    = "https://github.com/colszowka/simplecov-html"
-  gem.description = %(Default HTML formatter for SimpleCov code coverage tool for ruby 1.9+)
+  gem.homepage    = "https://github.com/AtomGrafiks/simplecov-html"
+  gem.description = %(Custom HTML formatter for SimpleCov code coverage tool for ruby 1.9+)
   gem.summary     = gem.description
   gem.license     = "MIT"
 
