@@ -42,7 +42,7 @@ module SimpleCov
 
       def asset_output_path
         return @asset_output_path if defined?(@asset_output_path) && @asset_output_path
-        @asset_output_path = File.join(output_path, "assets", SimpleCov::Formatter::HTMLFormatter::VERSION)
+        @asset_output_path = File.join(output_path, "assets", SimpleCov::Formatter::KickFormatter::VERSION)
         FileUtils.mkdir_p(@asset_output_path)
         @asset_output_path
       end
@@ -109,4 +109,4 @@ module SimpleCov
 end
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__)))
-require "simplecov-html/version"
+require "simplecov-kick/version"
