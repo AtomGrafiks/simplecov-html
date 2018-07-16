@@ -13,7 +13,7 @@ end
 
 module SimpleCov
   module Formatter
-    class HTMLFormatter
+    class KickFormatter
       def format(result)
         Dir[File.join(File.dirname(__FILE__), "../public/*")].each do |path|
           FileUtils.cp_r(path, asset_output_path)
@@ -48,7 +48,7 @@ module SimpleCov
       end
 
       def assets_path(name)
-        File.join("./assets", SimpleCov::Formatter::HTMLFormatter::VERSION, name)
+        File.join("./assets", SimpleCov::Formatter::KickFormatter::VERSION, name)
       end
 
       # Returns the html for the given source_file
