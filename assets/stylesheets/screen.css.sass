@@ -1,3 +1,21 @@
+:root
+  --background: #1B1E2E
+  --border: #2A2A42
+  --white: #E8E8EA
+  --highligh: #598fff
+  --header: #2b3c4a
+  --white: #f6f6f6
+  --action: #f37937
+  --competence: #f1f6f4
+  --vertk: #4bdda6
+  --black: #000000
+  --bgsalmon: #ffe3e3
+  --salmon: #fe6e61
+  --bgvertk: #c9f5e4
+  --darkhover: #253440
+  --default-grey: #a8aeb5
+  --light-grey: #dbdee0
+
 #loading
   position: fixed
   left: 40%
@@ -13,22 +31,31 @@ a
 body
   font-family: "Lucida Grande", Helvetica, "Helvetica Neue", Arial, sans-serif
   padding: 12px
-  background-color: #333
+  background-color: var(--background)
 
 h1, h2, h3, h4
-  color: #1C2324
+  color: #fff
   margin: 0
   padding: 0
   margin-bottom: 12px
+
+.ui-widget-header
+  background: transparent
+  border: none
+  color: #fff
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default
+  border: none
+  background: transparent
+  color: #fff
+  text-align: center
 
 table
   width: 100%
 
 #content
   clear: left
-  background-color: white
-  border: 2px solid #ddd
-  border-top: 8px solid #ddd
+  color: white
   padding: 18px
   -webkit-border-bottom-left-radius: 5px
   -webkit-border-bottom-right-radius: 5px
@@ -42,6 +69,19 @@ table
 
 .dataTables_filter, .dataTables_info
   padding: 2px 6px
+  display: flex
+  align-items: center
+
+  input
+    width: calc(100% - 20px)
+    margin-top: 10px
+    border-radius: 3px
+    border: none
+    background: #252a40
+    padding: 10px
+    color: #fff
+    outline: none
+    margin-left: 10px
 
 abbr.timeago
   text-decoration: none
@@ -53,9 +93,11 @@ abbr.timeago
   color: #ddd
 
 .group_tabs
+  display: flex
+  text-align: center
   list-style: none
   float: left
-  margin: 0
+  margin: 0 0 10px 0
   padding: 0
   li
     display: inline
@@ -66,44 +108,31 @@ abbr.timeago
       float: left
       text-decoration: none
       padding: 4px 8px
-      background-color: #aaa
-      background: -webkit-gradient(linear, 0 0, 0 bottom, from(#dddddd), to(#aaaaaa))
-      background: -moz-linear-gradient(#dddddd, #aaaaaa)
-      background: linear-gradient(#dddddd, #aaaaaa)
-      text-shadow: #e5e5e5 1px 1px 0px
+      background-color: var(--darkhover)
+      text-shadow: none
       border-bottom: none
-      color: #333
-      font-weight: bold
+      color: var(--white)
       margin-right: 8px
-      border-top: 1px solid #efefef
-      -webkit-border-top-left-radius: 2px
-      -webkit-border-top-right-radius: 2px
-      -moz-border-radius-topleft: 2px
-      -moz-border-radius-topright: 2px
-      border-top-left-radius: 2px
-      border-top-right-radius: 2px
+      border-radius: 2px
       &:hover
-        background-color: #ccc
-        background: -webkit-gradient(linear, 0 0, 0 bottom, from(#eeeeee), to(#aaaaaa))
-        background: -moz-linear-gradient(#eeeeee, #aaaaaa)
-        background: linear-gradient(#eeeeee, #aaaaaa)
+        background-color: var(--vertk)
       &:active
         padding-top: 5px
         padding-bottom: 3px
     &.active a
-      color: black
-      text-shadow: #fff 1px 1px 0px
-      background-color: #ddd
-      background: -webkit-gradient(linear, 0 0, 0 bottom, from(white), to(#dddddd))
-      background: -moz-linear-gradient(white, #dddddd)
-      background: linear-gradient(white, #dddddd)
+      background-color: var(--vertk)
 
 .file_list
   margin-bottom: 18px
 
 a.src_link
-  background: url('./magnify.png') no-repeat left 50%
   padding-left: 18px
+  color: #4adda6
+  font-weight: 400
+
+a.src_link:hover 
+  color: #fff
+  text-decoration: none
 
 tr, td
   margin: 0
@@ -120,6 +149,12 @@ td
   padding: 4px 8px
   &.strong
     font-weight: bold
+
+tr.even td
+  background: transparent
+
+tbody tr:hover
+  background: var(--darkhover);
 
 .source_table
   h3, h4
@@ -181,19 +216,19 @@ td
       text-decoration: none
 
 .green
-  color: #090
+  color: #4bdda6
 
 .red
-  color: #900
+  color: #de4b4b
 
 .yellow
-  color: #da0
+  color: #decc4b
 
 .source_table
   .covered
-    border-color: #090
+    border-color: #4bdda6
   .missed
-    border-color: #900
+    border-color: #de4b4b
   .never
     border-color: black
   .skipped
