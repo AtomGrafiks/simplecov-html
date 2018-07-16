@@ -1,5 +1,5 @@
 $LOAD_PATH.push File.expand_path("../lib", __FILE__)
-require "simplecov-html/version"
+require "simplecov-kick/version"
 
 Gem::Specification.new do |gem|
   gem.name        = "simplecov-kick"
