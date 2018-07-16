@@ -3,7 +3,7 @@ require "simplecov-html/version"
 
 Gem::Specification.new do |gem|
   gem.name        = "simplecov-html"
-  gem.version     = SimpleCov::Formatter::HTMLFormatter::VERSION
+  gem.version     = SimpleCov::Formatter::KickFormatter::VERSION
   gem.platform    = Gem::Platform::RUBY
   gem.authors     = ["Christoph Olszowka"]
   gem.email       = ["christoph at olszowka de"]
