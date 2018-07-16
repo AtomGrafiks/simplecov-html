@@ -896,6 +896,10 @@ tbody tr:hover {
 	color: #decc4b;
 }
 
+li.active .green, li.active .red, li.active .yellow {
+	color: var(--darkhover)
+}
+
 .source_table .covered {
 	border-color: #4bdda6;
 }
