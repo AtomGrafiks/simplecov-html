@@ -720,8 +720,11 @@ abbr.timeago {
 	text-align: center;
 	list-style: none;
 	float: left;
-	margin: 0 0 10px 0;
-	padding: 0;
+	margin: 10px 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .group_tabs li {
